@@ -23,7 +23,9 @@ _This software has been open sourced by [ElectricFeel Mobility Systems Gmbh](htt
 nstrct-objc is available through [CocoaPods](http://cocoapods.org), to install
 it simply add the following line to your Podfile:
 
-    pod "nstrct-objc"
+```ruby
+pod "nstrct-objc"
+```
 
 ## Instruction Composing
 
