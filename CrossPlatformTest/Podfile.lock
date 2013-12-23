@@ -1,0 +1,14 @@
+PODS:
+  - nstrct-objc (0.1.0)
+
+DEPENDENCIES:
+  - nstrct-objc (from `../`)
+
+EXTERNAL SOURCES:
+  nstrct-objc:
+    :path: ../
+
+SPEC CHECKSUMS:
+  nstrct-objc: c598fa7700f85c12dfc12b23fd1d29536b26d100
+
+COCOAPODS: 0.28.0
