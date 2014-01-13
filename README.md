@@ -30,13 +30,17 @@ pod "nstrct-objc"
 ## Instruction Composing
 
 ```objc
-# missing
+NCInstruction* instruction = [[NCInstruction alloc] initWithCode:234];
+NSData* [instruction pack];
 ```
 
 ## Instruction Processing
 
 ```objc
-# missing
+NCFrame* frame = [NCFrame parseFromBuffer:subdata];
+NCInstruction* instruction = frame.instruction;
+
+instruction.code
 ```
 
 
