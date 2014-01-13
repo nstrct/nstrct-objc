@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52460D9618842E950021AB76 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5FF2B3DDA1441B9DF55725 /* libPods.a */; };
 		52676E2F18685D8F005E5A78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52676E2E18685D8F005E5A78 /* Foundation.framework */; };
 		52676E3218685D8F005E5A78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52676E3118685D8F005E5A78 /* main.m */; };
 		52676E4218685F29005E5A78 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52676E4118685F29005E5A78 /* XCTest.framework */; };
@@ -66,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52460D9618842E950021AB76 /* libPods.a in Frameworks */,
 				52676E4218685F29005E5A78 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +446,7 @@
 				52676E4F18685F29005E5A78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

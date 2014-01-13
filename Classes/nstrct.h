@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+#import "NCFrame.h"
 #import "NCInstruction.h"
 #import "NCArgument.h"
 #import "NCValue.h"
