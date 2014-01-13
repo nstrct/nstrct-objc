@@ -25,11 +25,13 @@ void genereate()
   NSArray* array = @[ [[NCValue alloc] initWithNumber:[NSNumber numberWithUnsignedShort:2443]], [[NCValue alloc] initWithNumber:[NSNumber numberWithUnsignedShort:3443]] ];
   [instruction.arguments addObject:[[NCArgument alloc] initWithDatatype:NCDatatypeUInt16 andValues:array]];
   
+  NCFrame* frame = [[NCFrame alloc] initWithInstruction:instruction];
+  
   NSMutableData* length = [[NSMutableData alloc] init];
-  [length addUInt32:(uint32_t)[[instruction pack] length]];
+  [length addUInt32:(uint32_t)[[frame pack] length]];
   [length writeToFile:@"/dev/stdout" atomically:NO];
   
-  [[instruction pack] writeToFile:@"/dev/stdout" atomically:NO];
+  [[frame pack] writeToFile:@"/dev/stdout" atomically:NO];
 }
 
 void test(const char * string, bool exp) {
@@ -50,7 +52,8 @@ void process()
   NSData *inputData = [NSData dataWithData:[input readDataToEndOfFile]];
   NSData *subdata = [inputData subdataWithRange:NSMakeRange(4, inputData.length-4)];
   
-  NCInstruction* instruction = [NCInstruction parseFromBuffer:subdata];
+  NCFrame* frame = [NCFrame parseFromBuffer:subdata];
+  NCInstruction* instruction = frame.instruction;
   
   test("    boolean value", !getValue(instruction, 0, 0).booleanValue);
   test("    int8 value", getValue(instruction, 1, 0).numberValue.charValue == INT8_MIN);
